@@ -1,0 +1,16 @@
+int dublikat[]=new int[11];
+ int []parametri=new int[11];
+ 
+         parametri[0]=Integer.parseInt(aPer.getString(SAVED_TEXT,"16"));
+        parametri[1]=Integer.parseInt(aPer.getString(SAVED_PRIBL,"45"));
+        parametri[2]=Integer.parseInt(aPer.getString(SAVED_LAMINAT,"2200"));
+        parametri[3]=Integer.parseInt(aPer.getString(SAVED_KROMKA,"25"));
+        parametri[4]=Integer.parseInt(aPer.getString(SAVED_DBP,"550"));
+        parametri[5]=Integer.parseInt(aPer.getString(SAVED_NAVESA,"60"));
+        parametri[6]=Integer.parseInt(aPer.getString(SAVED_RUCKI,"350"));
+        parametri[7]=Integer.parseInt(aPer.getString(SAVED_DOSTAVKA,"1200"));
+        parametri[8]=Integer.parseInt(aPer.getString(SAVED_NAPRAV,"550"));
+        parametri[9]=Integer.parseInt(aPer.getString(SAVED_ZAZOR,"3"));
+        parametri[10]=Integer.parseInt(aPer.getString(STOIM_DVEROK,"2200"));
+        
+dublikat= Arrays.copyOf(parametr,parametr.length);
