@@ -1,0 +1,35 @@
+   private void Dialog_starta(){
+        //Получаем вид с файла prompt.xml, который применим для диалогового окна:
+        LayoutInflater li = LayoutInflater.from(context);
+        View promptsView = li.inflate(R.layout.dialog_kuhni, null);
+        AlertDialog.Builder moidialog=new AlertDialog.Builder(this);
+        //Настраиваем prompt.xml для нашего AlertDialog:
+        moidialog.setView(promptsView);
+        //Настраиваем отображение поля для ввода текста в открытом диалоге:
+        final RadioGroup vibor=(RadioGroup)promptsView.findViewById(R.id.vibor);
+        final RadioButton nogki = (RadioButton) promptsView.findViewById(R.id.nogki);
+        final RadioButton bez_nogek = (RadioButton) promptsView.findViewById(R.id.bez_nogek);
+        moidialog
+                .setTitle("Выберете вариант низа")
+                .setCancelable(false)
+        .setPositiveButton("ok", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                switch (vibor.getCheckedRadioButtonId()){
+                    case R.id.nogki:
+                        Toast.makeText(context ,"hjk",Toast.LENGTH_LONG).show();
+                        break;
+                    case R.id.bez_nogek:
+                        break;
+                }
+                startActivity(new Intent(Kuhna.this,Promegutok.class).putExtra("flage","5"));
+            }
+        });
+
+
+
+
+
+        AlertDialog alertDialog = moidialog.create();
+        alertDialog.show();
+    
