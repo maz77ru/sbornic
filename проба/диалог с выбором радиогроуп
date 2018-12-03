@@ -26,10 +26,36 @@
             }
         });
 
-
-
-
-
         AlertDialog alertDialog = moidialog.create();
         alertDialog.show();
     
+
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:checkedButton="@+id/radioButton"
+    android:orientation="vertical">
+
+
+    <RadioGroup
+       android:id="@+id/vibor"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:checkedButton="@+id/nogki"
+        android:gravity="center_horizontal">
+
+        <RadioButton
+            android:id="@+id/nogki"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/nogki" />
+
+        <RadioButton
+            android:id="@+id/bez_nogek"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/bez_nogek" />
+    </RadioGroup>
