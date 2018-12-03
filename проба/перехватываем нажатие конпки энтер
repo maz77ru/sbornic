@@ -1,0 +1,14 @@
+ otvet.setOnEditorActionListener(new EditText.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView textView, int i, KeyEvent keyEvent) {
+                if ((keyEvent != null && (keyEvent.getKeyCode() == KeyEvent.KEYCODE_ENTER))
+                        || (i == EditorInfo.IME_ACTION_DONE)) {
+                    //сделать, что нужно по нажатию на Done
+                    if (TextUtils.isEmpty(mnog1.getText().toString())){
+                        return false;
+                    }
+                  proverka();
+                }
+                return false;
+            }
+        });
