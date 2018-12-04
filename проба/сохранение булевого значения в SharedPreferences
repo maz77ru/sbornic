@@ -1,0 +1,37 @@
+public class Menui extends Activity implements View.OnClickListener{
+    SharedPreferences aPer;
+    private static final String SAVED_FASAD ="9000";
+    private static final boolean SAVED_VARIANT =false;
+-----------
+  @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.menui);
+        checkfasada=(CheckBox)findViewById(R.id.checkfasada);
+        stoim_fas=(TableRow)findViewById(R.id.stoim_fas);
+        aPer=getSharedPreferences("aPer",MODE_PRIVATE);
+        checkfasada.setOnClickListener(this);
+        loadtext();
+        -----------
+         public void start(View view) { //производим редактирование
+          SharedPreferences.Editor ed=aPer.edit();
+          if (checkfasada.isChecked()){
+         ed.putBoolean(String.valueOf(SAVED_VARIANT),false);
+        }
+        else {ed.putBoolean(String.valueOf(SAVED_VARIANT),true);}
+        ed.commit();
+        }
+        
+        -----------
+        
+         private void loadtext(){   //вытаскиваем параметр
+          if (aPer.getBoolean(String.valueOf(SAVED_VARIANT),false)==false){
+              checkfasada.setChecked(true);
+              checkfasada.setText("ok");
+              stoim_fas.setVisibility(View.INVISIBLE);
+          }else {
+              checkfasada.setChecked(false);
+              stoim_fas.setVisibility(View.VISIBLE);
+              checkfasada.setText("net");
+          }
+    }
