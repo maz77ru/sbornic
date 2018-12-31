@@ -1,0 +1,44 @@
+  protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (resultCode==RESULT_OK){
+            switch (requestCode){
+                case REQUEST_CODE_VERH:  //работаем по верхам
+                    int ser=data.getIntExtra("verha",0);//понимаем какой ящик мы ставим
+                    Opred_mesta();// теперь надо определить где пустое место
+
+                   switch (ser){
+                        case 1:
+                            verha[mas].setImageResource(R.drawable.vari1);
+                            matrica[mas][0]=1;
+                           // Reshaem();
+                            break;
+                        case 2:
+                            verha[mas].setImageResource(R.drawable.vari2);
+                            matrica[mas][0]=2;
+                            //Reshaem();
+                            break;
+                        case 3:
+                            verha[mas].setImageResource(R.drawable.vari3);
+                            matrica[mas][0]=3;
+                           // Reshaem();
+                            break;
+                        case 4:
+                            verha[mas].setImageResource(R.drawable.vari4);
+                            matrica[mas][0]=4;
+                           // Reshaem();
+                            break;
+                            default:
+                                break;
+                    }
+
+                    break;
+
+                case REQUEST_CODE_NIZ:
+                    int niza=data.getIntExtra("niza",0);
+                    switch (niza){
+                        case 1:
+                            break;
+                    }
+                    break;
+            }
+        }
+    }
