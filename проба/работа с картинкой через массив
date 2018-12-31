@@ -1,0 +1,11 @@
+String ger[]={"shk_1_d","shk_2_d","shk_1d_shu","shk_2_d_shu","shk_3_shu","shk_2_d","shk1_d_3shu","shk_2d_2shuf","shk_6_shuf",
+        "shk_3_d","shk_3d_2shuf","shk2_3_shuf","shk_3_d","shk1_d_6_shu","shk_2_d_3_shuf","kuhna1d","shk_1dantr","shk_2dantres",
+        "kamod_2i2","shk_2dantres","kuhna2d","kuhna2d1sh","kuhna2d2sh","kuhna3sh"};
+        //создаем массив катринок
+ ----------------------------------------
+ 
+   int kart= getResources().getIdentifier(ger[var], "drawable", getPackageName());
+     //в переменную кладем нужную нам картинку из массива
+   --------------------------------------
+   
+    kartinka.setImageResource(kart);
